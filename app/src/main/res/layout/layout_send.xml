@@ -5,9 +5,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    tools:context=".MainActivity"
     android:background="@drawable/gradient_background_light_blue">
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/parent">
 
 
     <TextView
@@ -21,9 +28,7 @@
         android:text="Broadification"
         android:textColor="@color/textColorPrimary"
         android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/tvContinue"
-        app:layout_constraintStart_toStartOf="parent"/>
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tvContinue"
@@ -70,18 +75,22 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="32dp"
         android:layout_marginStart="32dp"
-        android:theme="@style/TextInputLayoutTheme"
         android:layout_below="@id/tvContinue"
         android:textColorHint="@color/white"
-        android:elevation="15dp">
+        android:elevation="15dp"
+        app:hintTextColor="@color/white"
+        app:boxStrokeColor="@color/white"
+        app:boxStrokeWidth="3dp">
+<!--        android:theme="@style/TextInputLayoutTheme"-->
+
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etEmail"
+            android:id="@+id/edt_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Notification Title"
-            android:inputType="textEmailAddress"
             android:maxLines="1"
+            android:textColor="@color/white"
             android:textColorHint="@color/white"
             android:background="@android:color/transparent"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -93,19 +102,23 @@
         android:layout_marginEnd="32dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
-        android:theme="@style/TextInputLayoutTheme"
         android:layout_below="@id/tilEmail"
-        android:textColorHint="@color/white">
+        android:textColorHint="@color/white"
+        android:background="@android:color/transparent"
+        app:hintTextColor="@color/white"
+        app:boxStrokeWidth="3dp"
+        app:boxStrokeColor="@color/white">
+<!--        android:theme="@style/TextInputLayoutTheme"-->
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etPassword"
+            android:id="@+id/edt_message"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="Message"
             android:lines="5"
-            android:gravity="top|start"
-            android:inputType="textPassword"
+            android:inputType="textImeMultiLine"
             android:maxLines="1"
+            android:textColor="@color/white"
             android:background="@android:color/transparent"
             android:textColorHint="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -125,7 +138,7 @@
 <!--        app:layout_constraintVertical_bias="0.724"/>-->
 
     <Button
-        android:id="@+id/bSignIn"
+        android:id="@+id/btn_send"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
@@ -135,7 +148,7 @@
         android:text="Send NOtification"
         android:textAllCaps="false"
         android:drawableTint="@color/white"
-        android:textColor="@color/white"
+        android:textColor="#303F9F"
         android:layout_below="@id/tilPassword"/>
 
     <!--<TextView
@@ -167,4 +180,6 @@
         app:layout_constraintStart_toEndOf="@+id/tvNewHere"
         app:layout_constraintTop_toTopOf="@+id/tvNewHere"/>-->
 
+</RelativeLayout>
+</ScrollView>
 </RelativeLayout>

@@ -26,20 +26,20 @@
 <!--            android:padding="15dp"-->
 <!--            android:prompt="Select Audience Type" />-->
 
-    <EditText
+<!--    <EditText-->
 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/edt_title"
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/edt_title"-->
 
-        android:hint="title"
-        android:textSize="22sp"
-        android:layout_margin="18dp"
+<!--        android:hint="title"-->
+<!--        android:textSize="22sp"-->
+<!--        android:layout_margin="18dp"-->
 
-        android:background="@drawable/bg_border"
-        android:padding="15dp"
-        android:layout_centerHorizontal="true"/>
-    <EditText
+<!--        android:background="@drawable/bg_border"-->
+<!--        android:padding="15dp"-->
+<!--        android:layout_centerHorizontal="true"/>-->
+   <!-- <EditText
         android:layout_width="match_parent"
         android:layout_height="350dp"
         android:id="@+id/edt_message"
@@ -50,16 +50,16 @@
         android:padding="15dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/edt_title"
-        />
+        />-->
 
 
-    <Button
+    <!--<Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_send"
         android:text="send"
         android:layout_below="@id/edt_message"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"/>-->
 
 </RelativeLayout>
     </ScrollView>
