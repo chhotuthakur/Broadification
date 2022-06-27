@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Broadification</string>
+    <string-array name="type">
+        <item>Select Notification Type</item>
+        <item>General</item>
+        <item>Staff</item>
+    </string-array>
 </resources>
